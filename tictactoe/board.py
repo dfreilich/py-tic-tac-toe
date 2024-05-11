@@ -9,7 +9,7 @@ class Board:
         """Prints the current state of the board."""
         print("-------------")
         for row in [self.board[i * 3 : (i + 1) * 3] for i in range(3)]:
-            print("| " + " | ".join(row) + " |")
+            print(f"| {" | ".join(row)} |")
 
     def make_move(self, square: int, letter: str) -> bool:
         """Marks a move on the board."""

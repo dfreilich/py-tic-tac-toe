@@ -13,5 +13,7 @@ class RandomAPIWrapper:
         string_number = response.json()["value"]
         try:
             return int(string_number)
-        except ValueError:
-            raise f"Unable to parse move from random API (response: {response})"
+        except (ValueError, KeyError) as e:
+            raise ValueError(
+                f"Unable to parse move from random API (response: {response})"
+            ) from e

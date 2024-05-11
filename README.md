@@ -4,7 +4,7 @@ Python Tic Tac Toe Simulation
 ## Running:
 To run the code, execute:
 ```commandline
-make random # starts the random API docker container
+make random
 make run
 ```
 This will start the Tic Tac Toe game with two plays making random moves, until the game ends.
@@ -20,6 +20,17 @@ Then, initialize pre-commit in your repository:
 ```bash
 pre-commit install
 ```
+
+### Testing
+To execute the tests, run:
+```commandline
+make test
+```
+
+## Next Steps
+1. Better Printing/Logging &rarr; I think the program would be significantly improved by having a nicer print of the game, and more thoroughly testing the output
+2. Fill out tests &rarr; Test the remaining aspects of the program (add integration tests)
+3. AI Players &rarr; The current implementation is very simple, using just random selection. I think it could be made more interesting by using AI players who use algorithms to select more advantageous moves.
 
 ## Instructions:
 Develop a Tic Tac Toe simulation.
